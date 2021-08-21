@@ -8,7 +8,8 @@ const Order = () => {
     const [loading, setLoading] = useState(true);
    // const [loading, setLoading] = useState(true);
     useEffect(() => {
-        fetch('http://localhost:5000/order?email='+loggedInUser.email)
+      //  fetch('http://localhost:5000/order?email='+loggedInUser.email)
+        fetch('http://localhost:5000/order')
         .then(res => res.json())
         .then(result => {
             setBooking(result)
