@@ -36,7 +36,7 @@ const Login = () => {
 
     return (
         <div className="from-group mt-5">
-            <button className="btn btn-brand" onClick={handleGoogleSignIn}>Google Sign in</button>
+            <button className="btn btn-primary" onClick={handleGoogleSignIn}>Google Sign in</button>
         </div>
     );
 };

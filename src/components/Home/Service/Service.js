@@ -1,8 +1,18 @@
 import React from 'react';
+import { useHistory } from 'react-router';
 
-const Service = (props) => {
-    const {name, image, price} = props.service
-    console.log(props.service.image);
+
+
+const Service = ({service}) => {
+    
+    const {name, imageURL, price} = service
+    
+
+    const history = useHistory()
+    const handleBook = (_id) => {
+        history.push(`/checkout/${_id}`);
+    }
+
     return (
         
             <div className="col-md-4">
@@ -12,7 +22,7 @@ const Service = (props) => {
                         className="w-100"
                         style={{ objectFit: "contain", maxHeight: "300px" }}
                         variant="top"
-                        src={image}
+                        src={imageURL}
                     />
                 </div>
                 <div className="card-body pb-0">
@@ -25,13 +35,15 @@ const Service = (props) => {
                         style={{ fontWeight: "600", color: "#FF4B2B"}}>
                         ${price}
                     </div>
+                    <div className="row">
                     <button
-                       
+                        onClick={() => handleBook(service._id)}
                         to="checkout"
                       
                         className="buy-btn shadow-none">
                         Buy Now
                     </button>
+                    </div>
                 </div>
             </div>
         </div >

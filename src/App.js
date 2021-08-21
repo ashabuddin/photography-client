@@ -8,7 +8,9 @@ import {
 import AddService from "./components/Dashboard/AddService/AddService";
 import Dashboard from "./components/Dashboard/Dashboard/Dashboard";
 import Delete from "./components/Dashboard/Delete/Delete";
+import Checkout from "./components/Home/Checkout/Checkout";
 import Home from "./components/Home/Home/Home";
+import Order from "./components/Home/Order/Order";
 import Login from "./components/Login/Login/Login";
 import PrivateRoute from "./components/Login/PrivateRoute/PrivateRoute";
 
@@ -30,8 +32,14 @@ function App() {
           <Route path="/login">
                 <Login/>
           </Route>
+          <PrivateRoute path="/checkout/:_id">
+              <Checkout />
+            </PrivateRoute>
           <PrivateRoute path="/dashboard">
             <Dashboard />
+          </PrivateRoute>
+          <PrivateRoute path="/order">
+             <Order/>
           </PrivateRoute>
           <Route path="/addService">
             <AddService />

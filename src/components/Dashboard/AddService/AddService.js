@@ -15,6 +15,7 @@ const AddService = () => {
             email: data.email,
             price: data.price,
             imageURL: imageURL,
+            description: data.description,
 
         }
         const url = `http://localhost:5000/addService`;

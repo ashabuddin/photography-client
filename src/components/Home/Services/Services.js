@@ -42,7 +42,7 @@ const Services = () => {
 
                 <div className="w-75 row mt-3 pt-5">
                     {
-                        serviceData.map(service => <Service  service={service}></Service>)
+                        serviceData.map(service => <Service key={service._id} service={service}></Service>)
                     }
                 </div>
             </div>

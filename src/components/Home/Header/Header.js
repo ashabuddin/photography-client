@@ -15,13 +15,10 @@ const Header = () => {
                     <a className="nav-link active" aria-current="page" href="#home">Home</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#shop">Shop</a>
-                    </li>
-                    <li className="nav-item">
                     <a className="nav-link" href="#products">Products</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#blog">Blog</a>
+                    <a className="nav-link" href="/order">Order</a>
                     </li>
                     <li className="nav-item">
                     <a className="nav-link" href="/dashboard">Dashboard</a>
@@ -30,7 +27,7 @@ const Header = () => {
                     <a className="nav-link" href="#contact">Contact</a>
                     </li>
                     <li className="nav-item">
-                    <a className="nav-link" href="#login">LogIn</a>
+                    <a className="nav-link" href="/login">LogIn</a>
                     </li>
                 </ul>
                 </div>
