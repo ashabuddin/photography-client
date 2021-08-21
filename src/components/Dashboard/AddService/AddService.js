@@ -18,7 +18,7 @@ const AddService = () => {
             description: data.description,
 
         }
-        const url = `http://localhost:5000/addService`;
+        const url = `https://shrouded-coast-89761.herokuapp.com/addService`;
 
         fetch(url, {
             method: 'POST',

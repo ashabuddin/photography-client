@@ -4,13 +4,13 @@ import Sideber from '../Sideber/Sideber';
 const Delete = () => {
     const [serviceData, setServiceData] = useState([])
     useEffect(() => {
-        fetch('http://localhost:5000/serviceEvent')
+        fetch('https://shrouded-coast-89761.herokuapp.com/serviceEvent')
             .then(res => res.json())
             .then(data => setServiceData(data))
     }, [serviceData])
     
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`, {
+        fetch(`https://shrouded-coast-89761.herokuapp.com/delete/${id}`, {
 
             method: 'DELETE'
         })

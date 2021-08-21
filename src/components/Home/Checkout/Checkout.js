@@ -7,14 +7,14 @@ const Checkout = () => {
     const [service, setService] = useState({});
     const [loggedInUser] = useContext(UserContext);
     useEffect(() => {
-        fetch(`http://localhost:5000/service/${_id}`)
+        fetch(`https://shrouded-coast-89761.herokuapp.com/service/${_id}`)
             .then(res => res.json())
             .then(data => setService(data))
     }, [_id])
 
     const handleCheckout = () => {
         const newBooking = { ...loggedInUser, orderTime: new Date() };
-        fetch('http://localhost:5000/addOrder', {
+        fetch('https://shrouded-coast-89761.herokuapp.com/addOrder', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(newBooking)
